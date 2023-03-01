@@ -19,14 +19,36 @@
     <script>
         // ; 可有可無
         // gender => 男 true 1 女 false 0
-        let name = "Nick",
-            age = 32,
-            gender = true;
+        var name = nick;
+        console.log(name);
+
+        // Block Scope 區塊範圍
+
+
+        // let name = "Nick",
+        //     age = 32,
+        //     gender = true;
+
+        // let x;           => undefind
+        // let y = null;    => nill
+
+        // 真空妙有, 奇點, 大霹靂 by 老師走偏啦!!!!!
 
         // 傳統版
         // alert("Hi.." + name + ", " + age + ", " + gender);
 
-        alert(`${name}, ${age}, ${gender}`);
+        // alert(`${name}, ${age}, ${gender}`);
+
+        debugger;
+        // 除錯 => 技術/觀念/眼力
+        console.log(`${name}, ${age}, ${gender}`);
+
+        const person = {
+            name: "nick",
+            age: 32,
+            gender: true
+        };
+        console.log(person);
     </script>
 </body>
 
