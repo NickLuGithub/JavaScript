@@ -30,18 +30,18 @@
 
         let h1, container;
         // 雖然沒這必要，但這是技巧性給寫程式的人看這是陣列
-        // let imgsArray = [];
+        let imgsArray = [];
 
         window.onload = function() {
             container = document.getElementById("container");
             h1 = document.querySelector("h1");
             setH1();
             setImg(imageArray);
+            // debugger;
         }
 
         function setH1() {
             h1.innerText = title;
-            const displaysetH1 = setH1();
         }
 
         function setImg(imgArray) {
@@ -52,12 +52,18 @@
                     let img = document.createElement("img");
                     img.setAttribute("src", url)
                     container.append(img);
-
-                    // imgsArray.push = img;
                 })
             }
             const displaysetImg = setImg();
         }
+
+        // 補充
+        // container.childNodes
+        // container.childNodes[0].src
+        // container.children
+        // container.children[1].src
+        // let imgArray1 = [...container.childNodes];
+        // let imgArray2 = [...container.children]
     </script>
 </body>
 
