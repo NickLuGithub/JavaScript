@@ -21,14 +21,19 @@
         let result = document.getElementById("result");
 
         function Event1(event, element) {
-
+            alert(`${event.constructor.name}事件類型的 ${event.type}事件`);
+            alert(element.innerHTML);
         }
 
         let btn2 = document.getElementById("button2");
-
-
+        btn2.onclick = function(event) {
+            alert(`${event.constructor.name}事件類型的 ${event.type}事件`);
+        }
 
         let btn3 = document.getElementById("button3");
+        btn3.addEventListener('click', function(event) {
+            alert(`${event.constructor.name}事件類型的 ${event.type}事件`);
+        });
     </script>
 </body>
 
