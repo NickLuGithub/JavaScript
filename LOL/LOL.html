@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1></h1>
+    <div id="container"></div>
+
+    <script>
+        const title = "英雄聯盟 - Ahri阿離";
+
+        const imageArray = [
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_1.jpg",
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_2.jpg"
+        ];
+
+        let h1, container;
+        // 雖然沒這必要，但這是技巧性給寫程式的人看這是陣列
+        // let imgsArray = [];
+
+        window.onload = function() {
+            container = document.getElementById("container");
+            h1 = document.querySelector("h1");
+            setH1();
+            setImg(imageArray);
+        }
+
+        function setH1() {
+            h1.innerText = title;
+            const displaysetH1 = setH1();
+        }
+
+        function setImg(imgArray) {
+            if (!Array.isArray(imgArray)) {
+                return;
+            } else {
+                imgArray.forEach((url, index) => {
+                    let img = document.createElement("img");
+                    img.setAttribute("src", url)
+                    container.append(img);
+
+                    // imgsArray.push = img;
+                })
+            }
+            const displaysetImg = setImg();
+        }
+    </script>
+</body>
+
+</html>
