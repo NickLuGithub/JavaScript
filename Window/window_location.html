@@ -22,16 +22,19 @@
     <button id="btnPchome">PCHOME購物</button>
     <button id="btnMomo">Momo購物</button>
     <button id="btnYahoo">yahoo購物</button>
+    <button id="btnLativ">Lativ</button>
     <button id="btnReload">重新載入網頁</button>
     <img src="https://s4.lativ.com.tw/i/56268/56268_M_02_n.jpg">
 
     <script>
-        let btnPchome, btnMomo, btnYahoo, imgLativ, btnReload;
+        let btnPchome, btnMomo, btnYahoo, btnLativ, imgLativ, btnReload;
 
         window.onload = function() {
             btnPchome = document.getElementById("btnPchome");
             btnMomo = document.getElementById("btnMomo");
             btnYahoo = document.getElementById("btnYahoo");
+            btnLativ = document.getElementById("btnLativ");
+            btnReload = document.getElementById("btnReload");
             imgLativ = document.querySelector("img");
 
 
@@ -40,9 +43,8 @@
             btnPchome.addEventListener("click", () => {
                 window.location = "https://shopping.pchome.com.tw/";
             })
-
             btnMomo.addEventListener("click", () => {
-                window.location.assign = "https://www.momoshop.com.tw/main/Main.jsp";
+                window.location.assign("https://www.momoshop.com.tw/main/Main.jsp");
             })
             btnYahoo.addEventListener("click", () => {
                 location = "https://tw.yahoo.com/";
@@ -50,6 +52,26 @@
             btnLativ.addEventListener("click", () => {
                 location = "https://www.lativ.com.tw/OnSale/50DUP/WOMEN?pid=2211211359&utm_source=google&utm_campaign=GSN_1121_lativ_sale50DUP&AID=19090491&gclid=Cj0KCQjwtsCgBhDEARIsAE7RYh0TfB5EuxkyWsC51gOlOwg1GlqptIm5-r1_ozonXmCsTeOwIeRiwCwaAmSEEALw_wcB";
             })
+            btnReload.addEventListener("click", () => {
+                location.reload();
+            })
+
+            imgLativ.addEventListener("click", () => {
+                location = "https://www.lativ.com.tw/OnSale/50DUP/WOMEN?pid=2211211359&utm_source=google&utm_campaign=GSN_1121_lativ_sale50DUP&AID=19090491&gclid=Cj0KCQjwtsCgBhDEARIsAE7RYh0TfB5EuxkyWsC51gOlOwg1GlqptIm5-r1_ozonXmCsTeOwIeRiwCwaAmSEEALw_wcB";
+            })
+
+            imgLativ.addEventListener("mouseover", (event) => {
+                event.target.style.cursor = "pointer";
+                event.target.style.border = "2px solid red";
+            })
+
+            imgLativ.addEventListener("mouseout", (event) => {
+                event.target.style.cursor = "default";
+                event.target.style.border = "2px solid white";
+            })
+
+
+
         }
     </script>
 
